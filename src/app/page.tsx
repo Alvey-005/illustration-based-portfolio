@@ -1,7 +1,6 @@
 import Experience from "@/components/layout/Experience";
 import HeroSection from "@/components/layout/HeroSection";
 import Skills from "@/components/layout/Skills";
-import Image from "next/image";
 
 export default function Home() {
   return (

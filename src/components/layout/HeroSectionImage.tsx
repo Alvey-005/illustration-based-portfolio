@@ -8,9 +8,9 @@ const ResponsiveHeroImage = () => {
   const [imageSrc, setImageSrc] = useState<string | null>(null); // No initial image
   const [loading, setLoading] = useState(true);
   const windowWidth = useScreenWidth();
-  const isMobile = windowWidth < 1024;
+  // const isMobile = windowWidth < 1024;
   const isSmallDesktop = windowWidth >= 1024 && windowWidth < 1366;
-  const isLargeDesktop = windowWidth >= 1366;
+  // const isLargeDesktop = windowWidth >= 1366;
 
   useEffect(() => {
     // Ensure this runs only on the client
@@ -27,7 +27,7 @@ const ResponsiveHeroImage = () => {
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [windowWidth]);
 
   return (
     <div className="relative w-full  flex items-center justify-center">
