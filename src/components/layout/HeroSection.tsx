@@ -1,20 +1,20 @@
 import React from "react";
-import GlassIcon from "../ui/reactbits/GlassIcon";
 import { FaFacebook, FaGithub } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 
-import SocialIcons from "../ui/custom/SocialIcons";
-import HeroSectionImage from "./HeroSectionImage";
+import SocialIcons from "@/components/ui/custom/SocialIcons";
+import HeroSectionImage from "@/components/layout/HeroSectionImage";
 
 const HeroSection = () => {
 
   return (
+    <div className="px-4 lg:px-8 xl:px-20 2xl:px-3 w-full">
     <div className="mt-10 flex flex-col lg:flex-row items-center justify-center lg:justify-end font-sora lg:px-8 lg:relative w-full my-10 lg:my-16">
       <div className="order-1 lg:order-2 ">
         <HeroSectionImage/>
       </div>
       <div
-        className="flex flex-col gap-3 lg:gap-5 order-2 lg:order-1 flex-1 lg:absolute lg:w-1/2 lg:top-1/2 lg:transform lg:-translate-y-1/2 lg:left-0 
+        className="flex flex-col gap-3 lg:gap-5 order-2 lg:order-1 flex-1 lg:absolute lg:w-1/2 lg:top-1/2 lg:transform lg:-translate-y-1/2 lg:left-8 
       text-[28px] leading-[32px] md:text-2xl xl:text-5xl lg:py-5 mt-12 lg:mt-0
       "
       >
@@ -43,6 +43,7 @@ const HeroSection = () => {
         <SocialIcons icon={<SiLeetcode className="h-6 w-6" />} />
         <SocialIcons icon={<FaFacebook className="h-6 w-6" />} />
       </div>
+    </div>
     </div>
   );
 };

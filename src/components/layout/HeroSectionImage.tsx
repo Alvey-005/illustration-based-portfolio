@@ -2,18 +2,20 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import useScreenWidth from "@/hooks/useScreenWidth";
 
 const ResponsiveHeroImage = () => {
   const [imageSrc, setImageSrc] = useState<string | null>(null); // No initial image
   const [loading, setLoading] = useState(true);
-  const isMobile = window.innerWidth < 1024;
-  const isSmallDesktop = window.innerWidth >= 1024 && window.innerWidth < 1366;
-  const isLargeDesktop = window.innerWidth >= 1366;
+  const windowWidth = useScreenWidth();
+  const isMobile = windowWidth < 1024;
+  const isSmallDesktop = windowWidth >= 1024 && windowWidth < 1366;
+  const isLargeDesktop = windowWidth >= 1366;
 
   useEffect(() => {
     // Ensure this runs only on the client
     const handleResize = () => {
-      if (window.innerWidth >= 1024) {
+      if (windowWidth >= 1024) {
         setImageSrc("/male-dev-desktop.svg");
       } else {
         setImageSrc("/male-dev.svg");
