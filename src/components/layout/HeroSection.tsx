@@ -8,7 +8,7 @@ import HeroSectionImage from "@/components/layout/HeroSectionImage";
 const HeroSection = () => {
 
   return (
-    <div className="px-4 lg:px-8 xl:px-20 2xl:px-3 w-full">
+    <div className="px-4 lg:px-8 xl:px-20 2xl:px-32 w-full">
     <div className="mt-10 flex flex-col lg:flex-row items-center justify-center lg:justify-end font-sora lg:px-8 lg:relative w-full my-10 lg:my-16">
       <div className="order-1 lg:order-2 ">
         <HeroSectionImage/>
@@ -37,7 +37,7 @@ const HeroSection = () => {
         </article>
       </div>
 
-      <div className="order-3 lg:absolute lg:bottom-[-30px] lg:left-0  flex flex-row gap-8 mt-8 lg:mt-0">
+      <div className="order-3 lg:absolute lg:bottom-[-30px] lg:left-8  flex flex-row gap-8 mt-8 lg:mt-0 ">
         <SocialIcons icon={<FaFacebook className="h-6 w-6" />} />
         <SocialIcons icon={<FaGithub className="h-6 w-6" />} />
         <SocialIcons icon={<SiLeetcode className="h-6 w-6" />} />
