@@ -1,5 +1,7 @@
+import AboutMe from "@/components/layout/AboutMe";
 import Experience from "@/components/layout/Experience";
 import HeroSection from "@/components/layout/HeroSection";
+import Projects from "@/components/layout/Projects";
 import Skills from "@/components/layout/Skills";
 
 export default function Home() {
@@ -9,6 +11,8 @@ export default function Home() {
         <HeroSection />
         <Skills />
         <Experience />
+        <AboutMe />
+        <Projects />
       </main>
 
     </div>
